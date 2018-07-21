@@ -8,7 +8,8 @@ cd Exam2
 mvn clean
 mvn package
 mvn install
-java -jar target/exam2.jar
+java cp target/exam2.jar com.hand.socket.MainOfServer
+java cp target/exam2.jar com.hand.socket.MainOfClient
 cd ..
 cd Exam3
 mvn clean

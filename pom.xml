@@ -13,6 +13,11 @@
         <module>Exam2</module>
         <module>Exam3</module>
     </modules>
+    <build>
+        <plugins>
+
+        </plugins>
+    </build>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
