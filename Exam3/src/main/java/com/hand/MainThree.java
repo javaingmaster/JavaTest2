@@ -3,7 +3,9 @@ package com.hand;
 public class MainThree {
     public static void main(String[] args) {
         try {
-            DataProcess dataProcess=new DataProcess("sz300170");
+            String input=args[0];
+
+            DataProcess dataProcess=new DataProcess(input);
             String result=dataProcess.getData();
 
             CreateXml cx=new CreateXml(result);

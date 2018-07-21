@@ -7,10 +7,7 @@ import org.dom4j.io.OutputFormat;
 import org.dom4j.io.XMLWriter;
 
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 
 
 public class CreateXml extends Thread {
@@ -46,15 +43,9 @@ public class CreateXml extends Thread {
 
         OutputFormat format=OutputFormat.createPrettyPrint();
         format.setEncoding("UTF-8");
-        Writer out;
         try {
-
-            File file=new File("D:\\JavaTest2\\JavaTest2\\Exam3\\tmp\\股票编码.xml");
-            if (!file.exists()){
-                file.createNewFile();
-            }
-            out=new FileWriter(file);
-            XMLWriter xmlWriter=new XMLWriter(out,format);
+            OutputStreamWriter outputStreamWriter=new OutputStreamWriter(new FileOutputStream("Exam3\\tmp\\股票编码.xml"),"UTF-8");
+            XMLWriter xmlWriter=new XMLWriter(outputStreamWriter,format);
             xmlWriter.write(document);
             xmlWriter.close();
             System.out.println("解析xml成功");
