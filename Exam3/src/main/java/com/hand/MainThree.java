@@ -3,7 +3,6 @@ package com.hand;
 public class MainThree {
     public static void main(String[] args) {
         try {
-            String input=args[0];
             DataProcess dataProcess=new DataProcess("sz300170");
             String result=dataProcess.getData();
 

@@ -26,7 +26,11 @@ public class CreateJson extends Thread {
         jo.addProperty("low",values[5]);
 
         try {
-            BufferedOutputStream out=new BufferedOutputStream(new FileOutputStream(new File("Exam3\\tmp\\股票编码.json")));
+            File file=new File("D:\\JavaTest2\\JavaTest2\\Exam3\\tmp\\股票编码.json");
+            if (!file.exists()){
+                file.createNewFile();
+            }
+            BufferedOutputStream out=new BufferedOutputStream(new FileOutputStream(file));
             byte[] buff=jo.toString().getBytes();
             out.write(buff);
             out.flush();

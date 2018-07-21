@@ -62,6 +62,7 @@ public class ClientSocket extends Thread{
         }
         try {
             client.close();
+            System.exit(0);
         } catch (IOException e) {
             e.printStackTrace();
         }
